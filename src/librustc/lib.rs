@@ -64,6 +64,7 @@
 #![feature(unboxed_closures)]
 #![feature(underscore_lifetimes)]
 #![feature(trace_macros)]
+#![feature(catch_expr)]
 #![feature(test)]
 
 #![recursion_limit="512"]
@@ -88,6 +89,14 @@ extern crate syntax_pos;
 extern crate jobserver;
 
 extern crate serialize as rustc_serialize; // used by deriving
+
+extern crate rustc_apfloat;
+extern crate log_settings;
+extern crate byteorder;
+#[macro_use]
+extern crate lazy_static;
+extern crate regex;
+extern crate backtrace;
 
 // Note that librustc doesn't actually depend on these crates, see the note in
 // `Cargo.toml` for this crate about why these are here.
